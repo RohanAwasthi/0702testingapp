@@ -1,0 +1,34 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "0702testingapp"
+  description: "0702testingapp"
+
+  links:
+    - url: https://github.com/RohanAwasthi/0702testingapp
+      title: "0702testingapp"
+      icon: code
+
+  labels:
+    system: web-apps
+    trackid: "0702testingapp"
+    environmentname: my-python-env-0702
+
+  tags:
+    - python
+    - aws
+    - "applicationtype-webapplication"
+
+  annotations:
+    # add elastic beanstalk annotation
+    jenkins.io/github-folder: 'custom-actions/tf-0702testingapp'
+    github.com/project-slug: RohanAwasthi/0702testingapp
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/linguist: https://github.com/ItRachii/ebs-sample-python-application
+    sonarqube.org/project-key: 'python-app/aws-elb-python'
+
+spec:
+  type: service
+  lifecycle: experimental
+  system: elasticbeanstalk
+  owner: "neelesh.shekhar"
